@@ -20,7 +20,7 @@ export const  useProjectsDatabase = () => {
             id: 2,
             title: "Spermageddon",
             description: "Schzio teens learn pp and puzzy",
-           projectCover: "https://picsum.photos/400/600",
+            projectCover: "https://picsum.photos/400/600",
             duration: "2h 10m",
             genre: "Softcore",
             rating: 1.5,
@@ -42,6 +42,14 @@ export const  useProjectsDatabase = () => {
             ageRecommendation: "13+",
             director: "Jeffrey Epstein",
             releaseDate: "6 marts 2025",
+        },
+        {
+            id: 4,
+            title: "logo project",
+            description: "we got assigned to create a logo that included imagery in its text",
+            projectCover: "/src/assets/ChemistLogoSort.png",
+            semester: "1st semester",
+            group: "Group project"
         }
     ])
 
