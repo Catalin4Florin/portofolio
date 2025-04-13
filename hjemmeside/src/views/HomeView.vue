@@ -4,32 +4,31 @@
 
 <template>
   <main>
-    <div class="home">
-      <h1 class="underline text-2xl text-amber-300">This is home page</h1>
-      <p>Welcome to my homepage!</p>
-      <div class="hero">
-         <div class="myNameIs pl-4"> 
-          <h2> Hi! i am</h2>
-          <h3> Catalin Florin Roatis</h3>
-         </div>
-         <div class="aboutMe">
-          <p> about me</p>
+    <div class="home w-auto h-screen bg-no-repeat bg-top-right">
+      <div class="hero w-full h-full flex items-center">
+         <div class="myNameIs pl-10 opacity-100"> 
+          <h2 class="text-2xl"> Hi! i am</h2>
+          <h3 class="w-fit whitespace-nowrap text-5xl"> Catalin Florin Roatis</h3>
          </div>
       </div>
     </div>
+    <!-- about me section -->
+    <div class="aboutMe">
+          <p> about me</p>
+         </div>
   </main>
 </template>
 
 <style>
-.hero{
-  width: 100%;
+
+
+.home{
+  background-image: url('@/assets/heroCatalin2.jpg');
 }
 
-.myNameIs{
-  width: 830px;
-  height: 280px;
-  background-color: aqua;
-}
+
+
+
 .aboutMe{
   background-color: gray ;
 }
