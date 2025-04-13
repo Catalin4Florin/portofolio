@@ -49,8 +49,17 @@ export const  useProjectsDatabase = () => {
             description: "we got assigned to create a logo that included imagery in its text",
             projectCover: "/src/assets/ChemistLogoSort.png",
             semester: "1st semester",
-            group: "Group project"
+            group: "Group project",
+        },
+        {
+            id: 5,
+            title: "Exam project",
+            description: "The exam project was about creating awarnes for a global plastic treaty",
+            projectCover: "/src/assets/ChemistLogoSort.png",
+            semester: "1st semester",
+            group: "Group project",
         }
+
     ])
 
     return {

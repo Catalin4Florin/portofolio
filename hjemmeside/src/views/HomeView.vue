@@ -18,7 +18,7 @@
   </main>
 
   <!-- projects -->
-  <div class="ProjectCardsRow flex flex-wrap justify-center gap-4 z-1 relative !mt-10" >
+  <div class="ProjectCardsRow flex flex-wrap justify-center gap-4 relative !mt-10" >
           <div class="movieCard relative w-1/4 h-128 flex flex-col justify-end text-white "  v-for="(project, index) in filteredProjects" :key = "project">
               <router-link :to="`/projects/${project.id}`" class="!text-white"> 
               <div @mouseenter="toggleProjectData(index, true)" @mouseleave="toggleProjectData(index, false)" class=" bg-gray-700/70 p-5 fade-effect">
