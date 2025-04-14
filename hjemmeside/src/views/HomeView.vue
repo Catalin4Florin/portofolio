@@ -11,9 +11,9 @@
       </div>
     </div>
     <!-- about me section -->
-    <div class="aboutMe">
+    <div class="aboutM bg-gray-400">
           <h3 class="pl-4 pt-4 text-2xl"> About me</h3>
-          <p class="pl-4 pt-4"> Lorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pula </p>
+          <p class="pl-4 pt-4">  pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pula </p>
          </div>
   </main>
 
@@ -33,6 +33,18 @@
           </router-link>
           </div>  
        </div>
+
+      <!-- CV -->
+      <div class="w-screen h-fit pb-4 bg-gray-400">
+        <p class="pl-4 pt-4 text-4xl">You can download my full CV here</p>
+        <div class="flex justify-center mt-4">
+          <a href="/pathToCv.pdf" download="fineName.pdf">
+            <button class="bg-black text-white px-4 py-2 rounded">
+              Download CV
+            </button>
+          </a>
+        </div>
+      </div>
 </template>
 
 <script setup >
@@ -71,12 +83,5 @@ isProjectDataVisible.value[index] = isVisible;
 
 .home{
   background-image: url('@/assets/heroCatalin2.jpg');
-}
-
-
-
-
-.aboutMe{
-  background-color: gray ;
 }
 </style>

@@ -58,7 +58,15 @@ export const  useProjectsDatabase = () => {
             projectCover: "/src/assets/ChemistLogoSort.png",
             semester: "1st semester",
             group: "Group project",
-        }
+        },
+        {
+            id: 6,
+            title: "City branding",
+            description: "This project was about branding the City of Esbjerg in a way that will attract toursits or new residents",
+            projectCover: "/src/assets/ChemistLogoSort.png",
+            semester: "2nd semester",
+            group: "Group project",
+        },
 
     ])
 
