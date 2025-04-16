@@ -1,5 +1,3 @@
-
-
 <template>
   <main>
     <div class="home w-100% h-150 bg-no-repeat bg-top-right">
@@ -19,7 +17,7 @@
 
   <!-- projects -->
   <div class="ProjectCardsRow flex flex-wrap justify-center gap-4 relative !mt-10" >
-          <div class="movieCard relative w-1/4 h-128 flex flex-col justify-end text-white "  v-for="(project, index) in filteredProjects" :key = "project">
+          <div class="movieCard relative w-full md:w-1/4 md:pl-4 h-128 flex flex-col justify-end text-white "  v-for="(project, index) in filteredProjects" :key = "project">
               <router-link :to="`/projects/${project.id}`" class="!text-white"> 
               <div @mouseenter="toggleProjectData(index, true)" @mouseleave="toggleProjectData(index, false)" class=" bg-gray-700/70 p-5 fade-effect">
                   <h2 class="text-xl !font-bold">{{ project.title }}</h2>
@@ -35,14 +33,32 @@
        </div>
 
       <!-- CV -->
-      <div class="w-screen h-fit pb-4 bg-gray-400">
-        <p class="pl-4 pt-4 text-4xl">You can download my full CV here</p>
-        <div class="flex justify-center mt-4">
+      <div class="w-screen h-fit pb-4 pt-4 bg-gray-400">
+        <p class="pl-4 pt-4 text-4xl bg-black">You can download my full CV here</p>
+        <div class="flex justify-center pt-4">
           <a href="/pathToCv.pdf" download="fineName.pdf">
             <button class="bg-black text-white px-4 py-2 rounded">
               Download CV
             </button>
           </a>
+        </div>
+      </div>
+
+      <!-- video CV -->
+      <div class="w-screen h-fit pb-4 bg-gray-400">
+        <p class="pl-4 pt-4 text-4xl bg-black">Watch my Video CV</p>
+        <div class="flex justify-center mt-4 pt-4">
+          <div class="border-4 border-gray-500 rounded-lg p-4">
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/A_pp6N7Io2s" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
         </div>
       </div>
 </template>
