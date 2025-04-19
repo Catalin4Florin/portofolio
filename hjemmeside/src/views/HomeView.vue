@@ -36,7 +36,7 @@
       <div class="w-screen h-fit pb-4 pt-4 bg-gray-400">
         <p class="pl-4 pt-4 text-4xl bg-black">You can download my full CV here</p>
         <div class="flex justify-center pt-4">
-          <a href="/pathToCv.pdf" download="fineName.pdf">
+          <a href="/public/catalincv.pdf" download="CatalinCV.pdf">
             <button class="bg-black text-white px-4 py-2 rounded">
               Download CV
             </button>
