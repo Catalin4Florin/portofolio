@@ -21,7 +21,8 @@
               <router-link :to="`/projects/${project.id}`" class="!text-white"> 
               <div @mouseenter="toggleProjectData(index, true)" @mouseleave="toggleProjectData(index, false)" class=" bg-gray-700/70 p-5 fade-effect">
                   <h2 class="text-xl !font-bold">{{ project.title }}</h2>
-                  <img class="absolute inset-0 -z-1 bg-cover w-full h-full" :src="project.projectCover" alt="Project cover">
+                  <img class="absolute inset-0 -z-1 bg-cover w-fitl h-fit" :src="project.projectCover" alt="Project cover">
+                  <img class="absolute inset-0 -z-2 bg-cover w-full h-full" :src="project.projectCover" alt="Project cover">
                   <div v-if="isProjectDataVisible[index]">
                       <p> Description: {{ project.description }}</p>
                     <p class="underline"> {{ project.group }}</p>
