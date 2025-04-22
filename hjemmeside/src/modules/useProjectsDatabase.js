@@ -12,16 +12,16 @@ export const  useProjectsDatabase = () => {
         },
         {
             id: 2,
-            title: "",
+            title: "Tony's Chocolonely",
             description: "",
-            projectCover: "/src/assets/ChemistLogoSort.png",
+            projectCover: "/src/assets/TonyIcon.png",
             semester: "1st semester",
             group: "Group project"
         },
 
         {
             id: 3,
-            title: "logo project",
+            title: "Logo Project",
             description: "we got assigned to create a logo that included imagery in its text",
             projectCover: "/src/assets/ChemistLogoSort.png",
             semester: "1st semester",
@@ -29,7 +29,7 @@ export const  useProjectsDatabase = () => {
         },
         {
             id: 4,
-            title: "Exam project",
+            title: "Exam Project",
             description: "The exam project was about creating awarnes for a global plastic treaty",
             projectCover: "/src/assets/CleanAccord.png",
             semester: "1st semester",
@@ -37,7 +37,7 @@ export const  useProjectsDatabase = () => {
         },
         {
             id: 5,
-            title: "City branding",
+            title: "City Branding",
             description: "This project was about branding the City of Esbjerg in a way that will attract toursits or new residents",
             projectCover: "/src/assets/CityBranding.jpeg",
             semester: "2nd semester",
