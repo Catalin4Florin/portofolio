@@ -37,6 +37,10 @@ function scrollToSection(sectionId) {
 </template>
 
 <style scoped>
+main {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
