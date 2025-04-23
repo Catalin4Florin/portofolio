@@ -39,6 +39,8 @@ function scrollToSection(sectionId) {
 <style scoped>
 main {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 header {

@@ -9,15 +9,17 @@
       </div>
     </div>
     <!-- about me section -->
-    <div class=" bg-white ">
-          <h3 class="pl-4 py-4 text-3xl text-center text-[#00ffff] !font-bold"> About me</h3>
-            <p class="px-8 py-4 text-2xl text-white !stroke-black bg-[#00ffff] ">  Multimedia Design student at EASV with a passion for digital creativity and problem-solving. Skilled in Adobe programs, HTML, CSS, and JavaScript, I strive to bring ideas to life through design and development. Whether at work, the gym, or any challenge I take on, I give 110% to achieving the best results. Always eager to learn, improve, and push my limits.</p>
-         </div>
+    <div class=" bg-white">
+          <h3 class="p-4 text-3xl text-center text-[#00ffff] !font-bold"> About me</h3>
+            <p 
+            style="-webkit-text-stroke: 0;"
+            class="px-8 py-4 text-2xl text-white !stroke-black bg-[#00ffff] ">  Multimedia Design student at EASV with a passion for digital creativity and problem-solving. Skilled in Adobe programs, HTML, CSS, and JavaScript, I strive to bring ideas to life through design and development. Whether at work, the gym, or any challenge I take on, I give 110% to achieving the best results. Always eager to learn, improve, and push my limits.</p>
+    </div>
 
 
   <!-- projects -->
   <div class="text-center mt-10 bg-white">
-    <h2 class="text-3xl font-bold text-[#00ffff] py-4 !font-bold">My Past Projects</h2>
+    <h2 class="text-3xl text-[#00ffff] py-4 !font-bold">My Past Projects</h2>
   </div>
   <div class="ProjectCardsRow flex flex-wrap justify-center gap-4 relative !py-10" >
           <div class="projectCard relative w-full md:w-1/4 h-128 flex flex-col justify-between text-white"  v-for="(project, index) in filteredProjects" :key = "project">
@@ -27,7 +29,9 @@
               <div @mouseenter="toggleProjectData(index, true)" @mouseleave="toggleProjectData(index, false)" class=" bg-[#00ffff]/50 p-5 fade-effect flex">
                   <h2 class="text-xl !font-bold">{{ project.title }}</h2>
                   <img class="absolute inset-0 -z-2 bg-cover w-full h-full blur-sm" :src="project.projectCover" alt="Project cover">
-                  <div v-if="isProjectDataVisible[index]">
+                  <div 
+                  style="-webkit-text-stroke: 0;"
+                  v-if="isProjectDataVisible[index]">
                     <p> Description: {{ project.description }}</p>
                     <p class="underline"> {{ project.group }}</p>
                     <p> Semester: {{ project.semester }}</p>
@@ -43,7 +47,9 @@
         <p class="pl-4 pt-4 pb-4 text-4xl bg-white text-[#00ffff] text-center !font-bold">You can download my full CV here</p>
         <div class="flex justify-center pt-4">
           <a href="/public/catalincv.pdf" download="CatalinCV.pdf">
-            <button class="bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-[#00ffff]">
+            <button 
+            style="-webkit-text-stroke: 0;"
+            class=" bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-[#00ffff]">
               Download CV
             </button>
           </a>
