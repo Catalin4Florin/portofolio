@@ -9,14 +9,17 @@
       </div>
     </div>
     <!-- about me section -->
-    <div class="aboutM bg-gray-400">
-          <h3 class="pl-4 pt-4 text-2xl"> About me</h3>
-          <p class="pl-4 pt-4 bg-gray-300 text-black">  Multimedia Design student at EASV with a passion for digital creativity and problem-solving. Skilled in Adobe programs, HTML, CSS, and JavaScript, I strive to bring ideas to life through design and development. Whether at work, the gym, or any challenge I take on, I give 110% to achieving the best results. Always eager to learn, improve, and push my limits.</p>
+    <div class=" bg-white ">
+          <h3 class="pl-4 py-4 text-3xl text-center text-[#00ffff]"> About me</h3>
+            <p class="px-8 py-4 text-2xl text-white !stroke-black bg-[#00ffff] ">  Multimedia Design student at EASV with a passion for digital creativity and problem-solving. Skilled in Adobe programs, HTML, CSS, and JavaScript, I strive to bring ideas to life through design and development. Whether at work, the gym, or any challenge I take on, I give 110% to achieving the best results. Always eager to learn, improve, and push my limits.</p>
          </div>
   </main>
 
   <!-- projects -->
-  <div class="ProjectCardsRow flex flex-wrap justify-center gap-4 relative !mt-10  " >
+  <div class="text-center mt-10 bg-white">
+    <h2 class="text-3xl font-bold text-[#00ffff] py-4">My Past Projects</h2>
+  </div>
+  <div class="ProjectCardsRow flex flex-wrap justify-center gap-4 relative !pt-10 bg-[#00ffff] -z-1" >
           <div class="projectCard relative w-full md:w-1/4 h-128 flex flex-col justify-between text-white"  v-for="(project, index) in filteredProjects" :key = "project">
             <div></div>
             <img class="inset-0 -z-1 bg-cover w-fit h-fit justify-center" :src="project.projectCover" alt="Project cover">
@@ -36,11 +39,11 @@
        </div>
 
       <!-- CV -->
-      <div class="w-screen h-fit pb-4 pt-4 bg-gray-400">
-        <p class="pl-4 pt-4 text-4xl bg-black">You can download my full CV here</p>
+      <div id="cv" class="w-screen h-fit pb-4 pt-4 bg-[#00ffff]">
+        <p class="pl-4 pt-4 pb-4 text-4xl bg-white text-[#00ffff] text-center">You can download my full CV here</p>
         <div class="flex justify-center pt-4">
           <a href="/public/catalincv.pdf" download="CatalinCV.pdf">
-            <button class="bg-black text-white px-4 py-2 rounded hover:bg-red-500">
+            <button class="bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-[#00ffff]">
               Download CV
             </button>
           </a>
@@ -48,10 +51,10 @@
       </div>
 
       <!-- video CV -->
-      <div class="w-screen h-fit pb-4 bg-gray-400">
-        <p class="pl-4 pt-4 text-4xl bg-black">Watch my Video CV</p>
+      <div id="video-cv" class="w-full max-w-full mx-auto h-fit pb-4 bg-[#00ffff] text-center">
+        <p class="pl-4 pt-4 text-4xl pb-4 bg-white text-[#00ffff]">Watch my Video CV</p>
         <div class="flex justify-center mt-4 pt-4">
-          <div class="border-4 border-gray-500 rounded-lg p-4">
+          <div class="border-4 border-white rounded-lg p-4">
             <iframe 
               width="560" 
               height="315" 
@@ -97,8 +100,10 @@ isProjectDataVisible.value[index] = isVisible;
 
 </script>
 
-<style>
-
+<style scoped>
+.text-outline-white {
+  -webkit-text-stroke: .5px white;
+}
 
 .home{
   background-image: url('@/assets/heroCatalin2.jpg');

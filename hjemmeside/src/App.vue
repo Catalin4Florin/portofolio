@@ -1,17 +1,37 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
+
+function scrollToSection(sectionId) {
+  if (route.path === '/') {
+    setTimeout(() => {
+      const el = document.getElementById(sectionId)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
+  } else {
+    router.push('/').then(() => {
+      setTimeout(() => {
+        const el = document.getElementById(sectionId)
+        if (el) el.scrollIntoView({ behavior: 'smooth' })
+      }, 300)
+    })
+  }
+}
 </script>
 
 <template>
-  <!-- <header>
-    <div class="wrapper bg-gray-300 w-full">
+  <header>
+    <div class="wrapper w-full">
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/projects">Projects</RouterLink>
+      <nav class="">
+        <button @click="scrollToSection('video-cv')" class="px-2 py-1 text-black bg-white rounded">Video CV</button>
+        <button @click="scrollToSection('cv')" class="!ml-4 mr-4 px-2 py-1 text-black bg-white rounded">CV</button>
+
       </nav>
     </div>
-  </header> -->
+  </header>
 
   <RouterView />
 </template>
@@ -20,20 +40,23 @@ import { RouterLink, RouterView } from 'vue-router'
 header {
   line-height: 1.5;
   max-height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 1rem; 
 }
 
 .logo {
   display: block;
   margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
