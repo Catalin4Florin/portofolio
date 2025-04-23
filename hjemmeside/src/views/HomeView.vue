@@ -11,24 +11,26 @@
     <!-- about me section -->
     <div class="aboutM bg-gray-400">
           <h3 class="pl-4 pt-4 text-2xl"> About me</h3>
-          <p class="pl-4 pt-4">  pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pulaLorem pula </p>
+          <p class="pl-4 pt-4 bg-gray-300 text-black">  Multimedia Design student at EASV with a passion for digital creativity and problem-solving. Skilled in Adobe programs, HTML, CSS, and JavaScript, I strive to bring ideas to life through design and development. Whether at work, the gym, or any challenge I take on, I give 110% to achieving the best results. Always eager to learn, improve, and push my limits.</p>
          </div>
   </main>
 
   <!-- projects -->
   <div class="ProjectCardsRow flex flex-wrap justify-center gap-4 relative !mt-10  " >
-          <div class="projectCard relative w-full md:w-1/4 md:pl-4 h-128 flex flex-col justify-end text-white"  v-for="(project, index) in filteredProjects" :key = "project">
+          <div class="projectCard relative w-full md:w-1/4 h-128 flex flex-col justify-between text-white"  v-for="(project, index) in filteredProjects" :key = "project">
+            <div></div>
+            <img class="inset-0 -z-1 bg-cover w-fit h-fit justify-center" :src="project.projectCover" alt="Project cover">
               <router-link :to="`/projects/${project.id}`" class="!text-white"> 
-              <div @mouseenter="toggleProjectData(index, true)" @mouseleave="toggleProjectData(index, false)" class=" bg-gray-700/70 p-5 fade-effect">
+              <div @mouseenter="toggleProjectData(index, true)" @mouseleave="toggleProjectData(index, false)" class=" bg-gray-700/70 p-5 fade-effect flex">
                   <h2 class="text-xl !font-bold">{{ project.title }}</h2>
-                  <img class="absolute inset-0 -z-1 bg-cover w-fit h-fit" :src="project.projectCover" alt="Project cover">
                   <img class="absolute inset-0 -z-2 bg-cover w-full h-full blur-sm" :src="project.projectCover" alt="Project cover">
                   <div v-if="isProjectDataVisible[index]">
-                      <p> Description: {{ project.description }}</p>
+                    <p> Description: {{ project.description }}</p>
                     <p class="underline"> {{ project.group }}</p>
                     <p> Semester: {{ project.semester }}</p>
                   </div>
               </div>
+
           </router-link>
           </div>  
        </div>
@@ -38,7 +40,7 @@
         <p class="pl-4 pt-4 text-4xl bg-black">You can download my full CV here</p>
         <div class="flex justify-center pt-4">
           <a href="/public/catalincv.pdf" download="CatalinCV.pdf">
-            <button class="bg-black text-white px-4 py-2 rounded">
+            <button class="bg-black text-white px-4 py-2 rounded hover:bg-red-500">
               Download CV
             </button>
           </a>
@@ -66,7 +68,7 @@
 
 <script setup >
 import { ref, computed } from 'vue';
-import {useProjectsDatabase} from '../modules/useProjectsDatabase.js'
+import {useProjectsDatabase} from '../assets/useProjectsDatabase.js'
 
 const { projects } = useProjectsDatabase()
 

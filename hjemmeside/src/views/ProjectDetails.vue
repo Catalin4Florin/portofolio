@@ -1,17 +1,20 @@
 <template>
-    <div class="p-8">
+    <div>
         <h1> {{ project.title }}</h1>
         <img :src="project.projectCover" alt="">
-        <p> {{ project.description }}</p>
+        <p> {{ project.description }}</p> 
+        <p class="text-white"> puila pula </p>
+
     </div>
 </template>
 
 <script setup>
 import {computed} from 'vue'
-import { useProjectDatabase } from '../modules/useProjectsDatabase.js'
+import { useProjectsDatabase } from '../assets/useProjectsDatabase'
 import { useRoute } from 'vue-router'
 
-const { projects } = useProjectDatabase()   
+const { projects } = useProjectsDatabase()   
+console.log("projects", projects)
 const route = useRoute()
 
 const project = computed(() => {

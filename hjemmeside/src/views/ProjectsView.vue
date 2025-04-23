@@ -39,7 +39,7 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import {useProjectsDatabase} from '../modules/useProjectsDatabase.js'
+import {useProjectsDatabase} from '../assets/useProjectsDatabase.js'
 
 const { projects } = useProjectsDatabase()
 
