@@ -25,10 +25,12 @@ function scrollToSection(sectionId) {
   <header>
     <div class="wrapper w-full">
 
-      <nav class="">
-        <button @click="scrollToSection('video-cv')" class="px-2 py-1 text-black bg-white rounded">Video CV</button>
-        <button @click="scrollToSection('cv')" class="!ml-4 mr-4 px-2 py-1 text-black bg-white rounded">CV</button>
-
+      <nav class="absolute z-2 pt-20">
+        <button @click="scrollToSection('home')" class="!ml-4 mr-4 px-2 py-1 text-black bg-white rounded border border-black">Home</button>
+        <button @click="scrollToSection('about')" class="!ml-4 mr-4 px-2 py-1 text-black bg-white rounded border border-black">About me</button>
+        <button @click="scrollToSection('projects')" class="!ml-4 mr-4 px-2 py-1 text-black bg-white rounded border border-black">Projects</button>
+        <button @click="scrollToSection('cv')" class="!ml-4 mr-4 px-2 py-1 text-black bg-white rounded border border-black">CV</button>
+        <button @click="scrollToSection('video-cv')" class="!ml-4 px-2 py-1 text-black bg-white rounded border border-black">Video CV</button>
       </nav>
     </div>
   </header>

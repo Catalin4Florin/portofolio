@@ -1,21 +1,22 @@
 <template>
-  <div class="grid grid-cols-2 grid-rows-2 h-screen gap-px">
-    <div class="row-span-2 border border-black relative w-full h-full">
-      <img
-        :src="project.projectCover"
-        alt="Project Cover"
-        class="absolute inset-0 w-full h-full object-cover blur-sm z-0"
-      >
-      <img
-        :src="project.projectCover"
-        alt="Project Cover"
-        class="relative w-fit h-fit object-cover z-10 mx-auto my-auto"
-        style="top: 50%; left: 50%; transform: translate(-50%, -50%); position: absolute;"
-      >
-    </div>
-    <h1 class="bg-gray-300 flex items-center justify-center text-2xl border border-black">{{ project.title }}</h1>
-    <p class="bg-gray-400 flex items-center justify-center text-xl border border-black">{{ project.description }}</p>
+<div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 h-screen gap-px">
+  <div class="md:row-span-2 border border-black relative w-full h-full overflow-hidden">
+    <img :src="project.projectCover" alt="Project Cover" class="absolute inset-0 w-full h-full object-cover blur-sm z-0" />
+    <img :src="project.projectCover" alt="Project Cover" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-full max-h-full z-10" />
   </div>
+
+  <h1 class="bg-[#00ffff] text-white flex items-center justify-center text-4xl md:text-6xl border border-black"> {{ project.title }} </h1>
+
+  <div class="bg-white text-black flex flex-col items-center justify-center text-base md:text-xl px-4 border border-black">
+    <p class="text-center">{{ project.description }}</p>
+    <div class="mt-4">
+      <a v-if="project.projectLink" :href="project.projectLink" target="_blank" rel="noopener">
+        <button class="px-4 py-2 bg-[#00ffff] text-black border border-black rounded hover:bg-white hover:text-[#00ffff] transition"> View Project </button>
+      </a>
+    </div>
+  </div>
+</div>
+
 </template>
 
 <script setup>
