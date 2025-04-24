@@ -21,14 +21,14 @@
   <div class="text-center mt-10 bg-white">
     <h2 class="text-3xl text-[#00ffff] py-4 !font-bold">My Past Projects</h2>
   </div>
-  <div class="ProjectCardsRow flex flex-wrap justify-center gap-4 relative !py-10" >
+  <div class="ProjectCardsRow  flex flex-wrap justify-center gap-4 relative !py-10" >
           <div class="projectCard relative w-full md:w-1/4 h-128 flex flex-col justify-between text-white"  v-for="(project, index) in filteredProjects" :key = "project">
             <div></div>
-            <img class="inset-0 -z-1 bg-cover w-fit h-fit justify-center" :src="project.projectCover" alt="Project cover">
+            <img class="inset-0 bg-cover w-fit h-fit justify-center" :src="project.projectCover" alt="Project cover">
               <router-link :to="`/projects/${project.id}`" class="!text-white"> 
               <div @mouseenter="toggleProjectData(index, true)" @mouseleave="toggleProjectData(index, false)" class=" bg-[#00ffff]/50 p-5 fade-effect flex">
                   <h2 class="text-xl !font-bold">{{ project.title }}</h2>
-                  <img class="absolute inset-0 -z-2 bg-cover w-full h-full blur-sm" :src="project.projectCover" alt="Project cover">
+                  <img class="absolute inset-0 -z-1 bg-cover w-full h-full blur-sm" :src="project.projectCover" alt="Project cover">
                   <div 
                   style="-webkit-text-stroke: 0;"
                   v-if="isProjectDataVisible[index]">
@@ -109,6 +109,10 @@ isProjectDataVisible.value[index] = isVisible;
 </script>
 
 <style scoped>
+.ProjectCardsRow {
+  background-color: #00ffff;
+  z-index: 0;
+}
 .text-outline-white {
   -webkit-text-stroke: .5px white;
 }
