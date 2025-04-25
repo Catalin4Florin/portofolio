@@ -11,7 +11,7 @@
     <!-- about me section -->
     <div id="about" class=" bg-white">
       <h3 class="p-4 text-3xl text-center text-[#00ffff] !font-bold"> About me</h3>
-      <p style="-webkit-text-stroke: 0;" class="px-8 py-4 text-2xl text-white !stroke-black bg-[#00ffff] ">  Multimedia Design student at EASV with a passion for digital creativity and problem-solving. Skilled in Adobe programs, HTML, CSS, and JavaScript, I strive to bring ideas to life through design and development. Whether at work, the gym, or any challenge I take on, I give 110% to achieving the best results. Always eager to learn, improve, and push my limits.</p>
+      <p style="-webkit-text-stroke: 0;" class="px-8 py-4 text-2xl text-white !stroke-black bg-[#009dff] ">  Multimedia Design student at EASV with a passion for digital creativity and problem-solving. Skilled in Adobe programs, HTML, CSS, and JavaScript, I strive to bring ideas to life through design and development. Whether at work, the gym, or any challenge I take on, I give 110% to achieving the best results. Always eager to learn, improve, and push my limits.</p>
     </div>
 
 

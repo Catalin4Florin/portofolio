@@ -25,12 +25,12 @@ function scrollToSection(sectionId) {
   <header>
     <div class="wrapper w-full">
 
-      <nav class="absolute z-2 pt-20">
-        <button @click="scrollToSection('home')" class="!ml-4 mr-4 px-2 py-1 text-black bg-white rounded border border-black">Home</button>
-        <button @click="scrollToSection('about')" class="!ml-4 mr-4 px-2 py-1 text-black bg-white rounded border border-black">About me</button>
-        <button @click="scrollToSection('projects')" class="!ml-4 mr-4 px-2 py-1 text-black bg-white rounded border border-black">Projects</button>
-        <button @click="scrollToSection('cv')" class="!ml-4 mr-4 px-2 py-1 text-black bg-white rounded border border-black">CV</button>
-        <button @click="scrollToSection('video-cv')" class="!ml-4 px-2 py-1 text-black bg-white rounded border border-black">Video CV</button>
+      <nav class="absolute z-2 pt-20 max-w-full overflow-x-auto flex gap-2 md:gap-4">
+        <button @click="scrollToSection('home')" class="px-2 py-1 text-black bg-white rounded border border-black">Home</button>
+        <button @click="scrollToSection('about')" class="px-2 py-1 text-black bg-white rounded border border-black">About me</button>
+        <button @click="scrollToSection('projects')" class="px-2 py-1 text-black bg-white rounded border border-black">Projects</button>
+        <button @click="scrollToSection('cv')" class="px-2 py-1 text-black bg-white rounded border border-black">CV</button>
+        <button @click="scrollToSection('video-cv')" class="px-2 py-1 text-black bg-white rounded border border-black">Video CV</button>
       </nav>
     </div>
   </header>

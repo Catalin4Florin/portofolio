@@ -1,5 +1,5 @@
 <template>
-<div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 h-screen gap-px">
+<div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 h-screen gap-px pt-20 md:pt-0">
   <div class="md:row-span-2 border border-black relative w-full h-full overflow-hidden">
     <img :src="project.projectCover" alt="Project Cover" class="absolute inset-0 w-full h-full object-cover blur-sm z-0" />
     <img :src="project.projectCover" alt="Project Cover" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-full max-h-full z-10" />
